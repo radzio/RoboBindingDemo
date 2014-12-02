@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:bind="http://robobinding.org/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              tools:ignore="MissingPrefix"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    >
+<EditText
+    bind:text="${a}"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:hint="a"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"/>
+
+    <EditText
+        bind:double="${b}"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:hint="b"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        bind:double="{result}"
+        />
+</LinearLayout>

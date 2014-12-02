@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:bind="http://robobinding.org/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              tools:ignore="MissingPrefix"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin"
+              android:paddingTop="@dimen/activity_vertical_margin"
+              android:paddingBottom="@dimen/activity_vertical_margin"
+              tools:context=".MainActivity"
+              android:orientation="vertical">
+
+    <TextView
+        bind:text="{helloMessage}"
+        tools:text="Lorem ipsum..."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                 xmlns:tools="http://schemas.android.com/tools"
+                 android:id="@+id/root_container"
+                 android:layout_width="match_parent"
+                 android:layout_height="60dp"
+
+        >
+    <!--<android.support.v4.app.Fragment-->
+        <!--android:name="net.droidlabs.robobindingdemo.views.CalculatorFragment"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="60dp"-->
+        <!--tools:layout="@layout/fragment_calculator"-->
+        <!--android:id="@+id/calculatorFragment"/>-->
+</FrameLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        bind:itemLayout="@layout/simple_list_item"
+        bind:source="{texts}"
+        >
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            bind:onClick="sayHello"
+            android:text="@string/button_say_hello"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            bind:onClick="addNextValue"
+            android:text="@string/button_save"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            bind:onClick="showAlert"
+            android:text="@string/button_show_alert"/>
+    </LinearLayout>
+
+
+</LinearLayout>
