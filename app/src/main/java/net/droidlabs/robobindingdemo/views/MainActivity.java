@@ -44,7 +44,7 @@ public class MainActivity extends AbstractActivity implements IMainView
                 {
                     public void onClick(DialogInterface dialog, int which)
                     {
-                        // continue with delete
+                        // continue
                     }
                 })
                 .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener()
